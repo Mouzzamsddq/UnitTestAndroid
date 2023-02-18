@@ -102,7 +102,7 @@ jobs:
       - name: Sign Release Apk
         uses: r0adkll/sign-android-release@v1
         with:
-          releaseDirectory: app/build/outputs/bundle/productionRelease
+          releaseDirectory: app/release/
           signingKeyBase64: ${{ secrets.SIGNINGKEY }}
           alias: ${{ secrets.KEYSTORE_ALIAS }}
           keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
