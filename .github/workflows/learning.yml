@@ -132,7 +132,7 @@ jobs:
 
 
       - name: Generate Release AAB
-          run: ./gradlew assembleRelease
+        run: ./gradlew assembleRelease
 
       - name: Sign Release Apk
         uses: r0adkll/sign-android-release@v1
