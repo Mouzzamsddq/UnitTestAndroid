@@ -28,10 +28,11 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: lint.html
-          path: app/build/reports/tests/testDebugUnitTest/index.html
+          path: app/build/reports/lint-results-debug.html
 
 
   unit-test:
+    needs: [lint]
     runs-on: ubuntu-latest
 
     steps:
@@ -47,6 +48,12 @@ jobs:
 
       - name: Run unit test
         run: ./gradlew test
+
+      - name: Upload unit test report
+        run: actions/upload-artifact@v2
+        with:
+          name: UnitTestReport
+          path: app/build/reports/tests/testDebugUnitTest/
 
 
 
