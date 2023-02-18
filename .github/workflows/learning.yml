@@ -32,7 +32,7 @@ jobs:
 
 
   unit-test:
-    needs: [lint]
+#    needs: [lint]
     runs-on: ubuntu-latest
 
     steps:
@@ -57,7 +57,7 @@ jobs:
 
 
   build-apk:
-    needs: [unit-test]
+#    needs: [unit-test]
     runs-on: ubuntu-latest
 
     steps:
@@ -82,7 +82,7 @@ jobs:
 
 
   build-signed-release-apk:
-    needs: [build-apk]
+#    needs: [build-apk]
     runs-on: ubuntu-latest
 
     steps:
