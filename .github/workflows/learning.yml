@@ -24,5 +24,8 @@ jobs:
       - name: build project.
         run: ./gradlew build
 
+      - name: Run unit test
+        run: ./gradlew test
+
 
 
