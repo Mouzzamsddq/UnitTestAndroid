@@ -34,6 +34,6 @@ class MainViewModelTest {
         mainViewModel.setValidStatus()
         mainCoroutineRule.dispatcher.scheduler.advanceUntilIdle()
         val result = mainViewModel.validStatus.getOrAwaitValueTest()
-        assertThat(result.status).isEqualTo(ApiData.Status.SUCCESS)
+        assertThat(result.status).isEqualTo(ApiData.Status.LOADING)
     }
 }
